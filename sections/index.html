@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <title>Grão &amp; Afeto Café</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div class="pagina">
+      <!-- 5. SEÇÃO REDES SOCIAIS COM CARROSSEL DINÂMICO -->
+      <section class="secao secao-creme">
+        <div class="redes-grade">
+          <!-- Carrossel Dinâmico de Fotos (Lado Esquerdo 7 cols) -->
+          <div class="redes-fotos">
+            <div class="carrossel">
+              <!-- Slide Container -->
+              <div class="slides">
+                <div class="slide ativo">
+                  <img class="foto"
+                    src="/images/carrosel/carrosel-01.jpg" />
+                  <div class="legenda">
+                    <span class="legenda-texto">Cisne em latte art matinal</span>
+                    <span class="material-symbols-outlined ico-18">favorite</span>
+                  </div>
+                </div>
+                <div class="slide">
+                  <img class="foto"
+                    src="/images/carrosel/carrosel-02.jpg" />
+                  <div class="legenda">
+                    <span class="legenda-texto">Fornada das 08h saindo quente</span>
+                    <span class="material-symbols-outlined ico-18">favorite</span>
+                  </div>
+                </div>
+                <div class="slide">
+                  <img class="foto"
+                    src="/images/carrosel/carrosel-03.jpg" />
+                  <div class="legenda">
+                    <span class="legenda-texto">Mesa de cupping do novo microlote</span>
+                    <span class="material-symbols-outlined ico-18">favorite</span>
+                  </div>
+                </div>
+                <div class="slide">
+                  <img class="foto"
+                    src="/images/carrosel/carrosel-04.jpg" />
+                  <div class="legenda">
+                    <span class="legenda-texto">Encontros que aquecem a alma</span>
+                    <span class="material-symbols-outlined ico-18">favorite</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button class="seta seta-esq" id="ant" type="button">
+                <span class="material-symbols-outlined ico-20">chevron_left</span>
+              </button>
+              <button class="seta seta-dir" id="prox" type="button">
+                <span class="material-symbols-outlined ico-20">chevron_right</span>
+              </button>
+              <!-- Indicators -->
+              <div class="pontos">
+                <button class="ponto ativo"></button>
+                <button class="ponto"></button>
+                <button class="ponto"></button>
+                <button class="ponto"></button>
+              </div>
+            </div>
+          </div>
+          <!-- Texto & Botão Instagram (Lado Direito 5 cols) -->
+          <div class="redes-texto">
+            <div class="selo">
+              <span class="material-symbols-outlined ico-16">photo_camera</span>
+              <span>Comunidade &amp; Bastidores</span>
+            </div>
+            <h2 class="titulo titulo-redes">Siga o @graoeafetocafe</h2>
+            <p class="paragrafo paragrafo-margem">
+              Acompanhe diariamente nossos bastidores: o som da torrefação às
+              terças-feiras, os testes da pâtisserie, lançamentos sazonais e o
+              afeto compartilhado em cada detalhe.
+            </p>
+            <a class="btn btn-insta" href="https://instagram.com/graoeafetocafe" rel="noopener noreferrer"
+              target="_blank">
+              <span class="material-symbols-outlined ico-20">photo_camera</span>
+              <span>Acessar nosso Instagram</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- 7 & 8. SEÇÃO EQUIPE COM EXPANSÃO IN-PLACE INTERATIVA -->
+      <section class="secao secao-claro" id="equipe">
+        <div class="conteudo">
+          <div class="equipe-cabecalho">
+            <span class="sobretitulo">Nossos Artesãos</span>
+            <h2 class="titulo">Pessoas que Criam a Magia</h2>
+            <p class="paragrafo">
+              Passe o mouse ou toque nos cards para descobrir a formação,
+              paixão e história de quem cuida de cada detalhe da sua xícara.
+            </p>
+          </div>
+          <div class="equipe-grade">
+            <!-- Membro 1: Clara Silveira -->
+            <div class="membro">
+              <!-- Image Area with Dual Photo Transition (Portrait + In-Action) -->
+              <div class="membro-fotos">
+                <img class="foto-retrato"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRDmsidcHgLBD-ZYa0J0iSKVGlr3rZTa3gXicpLyL517RHMKZ0NnknMt3h_Y-_u8wwHmj4yIg3Ky7_55JUY7Xrj0zutHY5_2G1mbTGCbsL1yDRQzv0ga5Do9VShqzEM6O3U1QW6GgiEDEbr_SXavCMUD0W_rhCrEa_M6fYNs33MyZmYXUdA8YDzYHoT2lPNaQG8x7mhlgSORcbDZ9kjPaqeS4sloZ9SRIrchJwLwY" />
+                <!-- Segunda Foto em Ação: Torrefação artesanal & seleção de microlotes -->
+                <img class="foto-acao"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN06EsoOYsfT5mW7lZ21RNKoMpjHqDDk4J2kfp_xLFa5NaVTD_fWNMhX2Wayhz2vPyGxD56JQGYuY8PkG4bIxY2kLLu88N9JZpyLf76eCUCipDEkeJjnb0Dbpdu8bk_bqFR41oB7aGtnZCmD2PzBqdjSYk7RDyO6hIxZgqxlOWSkWENoddQCyieJf3DVd9uzFzrLybLB36CXHCVthonXg7jnDUNvWuk-tUW03G9No" />
+                <div class="membro-sombra"></div>
+                <div class="membro-acao">
+                  <span class="material-symbols-outlined ico-15">local_fire_department</span>
+                  <span>Em ação na torra</span>
+                </div>
+                <div class="membro-cargo">Fundadora</div>
+              </div>
+              <div class="membro-corpo">
+                <div>
+                  <div class="membro-topo">
+                    <h3 class="membro-nome">Clara Silveira</h3>
+                    <span class="material-symbols-outlined membro-seta">arrow_outward</span>
+                  </div>
+                  <span class="membro-funcao">Mestre de Torra &amp; Sócia</span>
+                  <!-- Expanded details on hover -->
+                  <div class="bio">
+                    <div class="bio-linha">
+                      <strong class="rotulo">Idade:</strong>
+                      34 anos
+                    </div>
+                    <div class="bio-linha">
+                      <strong class="rotulo">Formação:</strong>
+                      Q-Grader SCA &amp; Engenharia de Alimentos
+                    </div>
+                    <div class="bio-linha">
+                      <strong class="rotulo">Função:</strong>
+                      Curadoria de origens, torra artesanal semanal e perfil
+                      sensorial da marca.
+                    </div>
+                    <p class="bio-frase">
+                      "Acredito que o café é a ponte mais calorosa entre a
+                      terra viva e a alma de quem busca acolhimento."
+                    </p>
+                  </div>
+                </div>
+                <div class="membro-dica">
+                  <span>Passe o cursor para ver biografia &amp; ação</span>
+                  <span class="material-symbols-outlined ico-16">touch_app</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Membro 2: Lucas Moretti -->
+            <div class="membro">
+              <!-- Image Area with Dual Photo Transition -->
+              <div class="membro-fotos">
+                <img class="foto-retrato"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjson4SVvNGMlsRci2db2i3s_Vpah5lLvPDrz8bv11BzQWy8Jj_RL0CFygZg9jaSs9H6mKCqxjvyUrkFMmfu9lxv0CfZ_P7uw7120a0l9z41H4FxXZAc2BinT1KE37phKVOX0lcukLCSH4cn6FrsbLRCwzZA2I0s9zSu-CiP1Zr5Z_rGdhFyqPkZTwgU7en4FlTsjT3NLuSW4zFI7WNkCRN18KGQ-wFC5YN-nuXSY" />
+                <!-- Segunda Foto em Ação: Despejo preciso e Latte Art na xícara de cerâmica -->
+                <img class="foto-acao"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ1ZboaQenbbAeistH1-dQdHybmrpF-PyEOOcCKyU9j50qdZlgfwcOlmhf3aTmbfDkUhaIJAH3Ib5yIbFEp45G5_mA2Y6hSVwE0mqrgwvehcLzKRN3AqmVix82bPSvaNqUEQ8q8mKT2p-7jsIrtsL8jVIz9CMrDqwz8VrTN_9UNIkiAxSK7FQVyplB5NzbmNJruWvnI6lv2Dp9ie556MUcXsRTOMMSt3d_O8mhWdQ" />
+                <div class="membro-sombra"></div>
+                <div class="membro-acao tom-medio">
+                  <span class="material-symbols-outlined ico-15">coffee</span>
+                  <span>No bar espresso</span>
+                </div>
+                <div class="membro-cargo tom-medio">Head Barista</div>
+              </div>
+              <div class="membro-corpo">
+                <div>
+                  <div class="membro-topo">
+                    <h3 class="membro-nome">Lucas Moretti</h3>
+                    <span class="material-symbols-outlined membro-seta">arrow_outward</span>
+                  </div>
+                  <span class="membro-funcao">Head Barista &amp; Latte Art</span>
+                  <div class="bio">
+                    <div class="bio-linha">
+                      <strong class="rotulo">Idade:</strong>
+                      29 anos
+                    </div>
+                    <div class="bio-linha">
+                      <strong class="rotulo">Formação:</strong>
+                      Campeão Regional de Latte Art &amp; SCA Barista Pro
+                    </div>
+                    <div class="bio-linha">
+                      <strong class="rotulo">Função:</strong>
+                      Calibragem diária do espresso e treinamento técnico do
+                      balcão.
+                    </div>
+                    <p class="bio-frase">
+                      "Desenhar sobre a crema é a minha poesia diária entregue
+                      diretamente nas suas mãos."
+                    </p>
+                  </div>
+                </div>
+                <div class="membro-dica">
+                  <span>Passe o cursor para ver biografia &amp; ação</span>
+                  <span class="material-symbols-outlined ico-16">touch_app</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Membro 3: Sofia Andrade -->
+            <div class="membro">
+              <!-- Image Area with Dual Photo Transition -->
+              <div class="membro-fotos">
+                <img class="foto-retrato"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp0GVDeMbKU2DjIRVqUxMtil1B0jide1SF8cU0TL1lbGGH03MDMY9H5fcM8GDtkpHZV7HkIajxuy9AFHmIgCCtUI4zM2yo4jlhxFaD3CwRWJhYnXF4aVX4qOrwUKCgV4RR6C1ZlLBAgQFJ1k2K4sTH1POLYF_gC5KvusIDgopLJYP5D8izA1F_t7sUJIsU4EwlLIgNlCN-iC0_bCuZn3lIA1g7GA7UXWGWBxo0GdY" />
+                <!-- Segunda Foto em Ação: Confeitando e assando fornada artesanal -->
+                <img class="foto-acao"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqDWTWbznTyjzI0pZci4BB0oPfHpNvhBEsPM-W4eSM9Gvm2uz2jB3fZlWoyfWl7UbsrD21oNZ_tDpj8wsnCvij52w83WWeeqKy1u_plypa8EZlafE0PR_j1KWQynN96CX3V0lqlxNpdeTrEqjnDT33C-YLiq0nPR6dPmote07QK95TznYQX6G5AW5UczKaM9FMmgL055OOeteLJAASvin0JUw9wKxmKA_3Tjr_yIY" />
+                <div class="membro-sombra"></div>
+                <div class="membro-acao">
+                  <span class="material-symbols-outlined ico-15">bakery_dining</span>
+                  <span>Na pâtisserie</span>
+                </div>
+                <div class="membro-cargo">Chef Pâtissière</div>
+              </div>
+              <div class="membro-corpo">
+                <div>
+                  <div class="membro-topo">
+                    <h3 class="membro-nome">Sofia Andrade</h3>
+                    <span class="material-symbols-outlined membro-seta">arrow_outward</span>
+                  </div>
+                  <span class="membro-funcao">Chef Pâtissière &amp; Afeto</span>
+                  <div class="bio">
+                    <div class="bio-linha">
+                      <strong class="rotulo">Idade:</strong>
+                      31 anos
+                    </div>
+                    <div class="bio-linha">
+                      <strong class="rotulo">Formação:</strong>
+                      Le Cordon Bleu Paris (Grand Diplôme)
+                    </div>
+                    <div class="bio-linha">
+                      <strong class="rotulo">Função:</strong>
+                      Criação de sobremesas, fermentação dos sourdoughs e
+                      viennoiseries diárias.
+                    </div>
+                    <p class="bio-frase">
+                      "O doce não deve mascarar o café, mas dançar com ele em
+                      perfeita cumplicidade gastronômica."
+                    </p>
+                  </div>
+                </div>
+                <div class="membro-dica">
+                  <span>Passe o cursor para ver biografia &amp; ação</span>
+                  <span class="material-symbols-outlined ico-16">touch_app</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Membro 4: Thiago Ramos -->
+            <div class="membro">
+              <!-- Image Area with Dual Photo Transition -->
+              <div class="membro-fotos">
+                <img class="foto-retrato"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAdlZjA6cjVcm4x6jOvxCTrF_OQoy93Yw0hj_Jf2yCSF_VO6ZlHKbtmNK0uTBnrngUMXQhNmK37V7OqcZSTF_8qgnuvlJ81bM_8_o6S8UnaW62-vCP_guFCrG1YnH8ad-2esVZT9PaAFf_GR7KufD31-YdrgSidToFLfcHdG0sSatQu518ieU_pBNdnhWo14kVuK7DxZcIA2fwl8X2-4V76keCRdedd-nWArfx-sQ" />
+                <!-- Segunda Foto em Ação: Extração minuciosa com chaleira gooseneck na Chemex -->
+                <img class="foto-acao"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbPXqrIHWLniWnnK_3NUk442hz0ETZICaOD32WYJT4x83ja-Cc6qo8Evzi3sfeSiLrJGrpfab6lLrc4fpACjpd_zCqgx79nvAnOf-qNTTmPOIxtptM_47m0PAKH0h92nbZnLuX2F7dJ0EvciLCvALrsxl1BmunHhBv_LH4qNu65Dty8T7rlvSNQ9xuS7P01xP8bxIkyymKXoXUD8sKei4YMeG_Tv2XorX8nPYh1to" />
+                <div class="membro-sombra"></div>
+                <div class="membro-acao tom-medio">
+                  <span class="material-symbols-outlined ico-15">science</span>
+                  <span>Na bancada de filtrados</span>
+                </div>
+                <div class="membro-cargo tom-medio">Curador</div>
+              </div>
+              <div class="membro-corpo">
+                <div>
+                  <div class="membro-topo">
+                    <h3 class="membro-nome">Thiago Ramos</h3>
+                    <span class="material-symbols-outlined membro-seta">arrow_outward</span>
+                  </div>
+                  <span class="membro-funcao">Barista &amp; Métodos Manuais</span>
+                  <div class="bio">
+                    <div class="bio-linha">
+                      <strong class="rotulo">Idade:</strong>
+                      26 anos
+                    </div>
+                    <div class="bio-linha">
+                      <strong class="rotulo">Formação:</strong>
+                      Especialista em Sensorialidade e Extrações pelo Coffee
+                      Lab
+                    </div>
+                    <div class="bio-linha">
+                      <strong class="rotulo">Função:</strong>
+                      Apresentação dos métodos filtrados e oficinas de café
+                      para clientes.
+                    </div>
+                    <p class="bio-frase">
+                      "Não preparamos apenas uma infusão; convidamos as
+                      pessoas a desacelerarem o tempo."
+                    </p>
+                  </div>
+                </div>
+                <div class="membro-dica">
+                  <span>Passe o cursor para ver biografia &amp; ação</span>
+                  <span class="material-symbols-outlined ico-16">touch_app</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 9. SEÇÃO NOSSO AMBIENTE (MOSAICO ARQUITETÔNICO) -->
+      <section class="secao secao-creme" id="ambiente">
+        <div class="conteudo">
+          <div class="ambiente-topo">
+            <div class="ambiente-texto">
+              <span class="sobretitulo">Design &amp; Conforto</span>
+              <h2 class="titulo">
+                Um Refúgio para Respirar, Trabalhar e Sentir
+              </h2>
+              <p class="paragrafo">
+                Pensado com arquitetura biofílica, luz natural abundante,
+                mesas espaçosas equipadas com tomadas, trilha sonora lo-fi e
+                acústica suave, além de uma varanda totalmente pet friendly
+                para receber seu melhor amigo.
+              </p>
+            </div>
+            <div class="comodidades">
+              <div class="comodidade">
+                <span class="material-symbols-outlined ico-18 ico-destaque">pets</span>
+                <span>Pet Friendly</span>
+              </div>
+              <div class="comodidade">
+                <span class="material-symbols-outlined ico-18 ico-destaque">wifi</span>
+                <span>Wi-Fi 500MB</span>
+              </div>
+              <div class="comodidade">
+                <span class="material-symbols-outlined ico-18 ico-destaque">power</span>
+                <span>Tomadas em Todas Mesas</span>
+              </div>
+            </div>
+          </div>
+          <!-- Galeria Mosaico Assiétrica -->
+          <div class="mosaico">
+            <!-- Imagem Maior Balcão -->
+            <div class="mosaico-item mosaico-largo">
+              <img class="mosaico-foto"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaxT1vY_i9E8Kei2PK8cJD2aAy0FJho3d7wCw8BC9MKFe_kEQCFxrLGGWa-sOzNVEh1MWDuJo7SP3u5EoGv2z8tRqAhynFx1oLut5wZfdZgnv6up4YfwntkIlLmrdle2yENedlPa-xC0-b8ebgdgo73mue3MMbJgZWRtKeZj9kT_rtrEdi7aB5rTpOLJlKYU6QZ8n3NMGPpXJUsRgPo9YCOrdjIqKPsJAWthSreZ4" />
+              <div class="mosaico-legenda">
+                <span class="mosaico-rotulo">O Balcão</span>
+                <span class="mosaico-titulo">Madeira nobre de reuso &amp; iluminação dourada
+                  acolhedora</span>
+              </div>
+            </div>
+            <!-- Imagem Poltronas Mezanino -->
+            <div class="mosaico-item mosaico-alto">
+              <img class="mosaico-foto"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC04PdL9CErO3FldRiEzz9aBV2Pzo1EJ4kQ9KkXniy1IlpJYruNvubizq7HZBs16nMIbSh3MormiPW5IfHnOmi0hBHjw_a1ggdMHOXF46IAxTMiUVJsveapKxJLixDFlMmbYVVGAHsNm0XjYb3apc37_umgAe_KqwDr8rpIH2WSwVKMCWa1ydfhK0jJV7p0uIgEBfvE1abW6u00XiyhHZvpQr-J3gLrhfWeLtPKuU" />
+              <div class="mosaico-legenda">
+                <span class="mosaico-rotulo">Espaço Leitura</span>
+                <span class="mosaico-titulo">Poltronas e silêncio produtivo</span>
+              </div>
+            </div>
+            <!-- Imagem Varanda Pet -->
+            <div class="mosaico-item mosaico-baixo">
+              <img class="mosaico-foto"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8U4DEinNNCX-AbaWVZalnpdqsoqE6ZrGtGx1DumPuohhZTC1F51o9TmOnEUv0RRvxmpjllEU4W6rYbKgA4BGdlqE5RbqF4rLikDjZv1ERvFeLwuufKMYerZG4MKBANgEAK4oWQWCfS97w-KgdNCmFdoAxGJu4O4ql5uQDYg6Xt7XgjvbZ-rGRI-6QAXbi8ZILJlZUlrwwQ6cy4XmojtFYRxijFDqiK1slz5hQudA" />
+              <div class="mosaico-legenda">
+                <span class="mosaico-rotulo">Varanda Aberta</span>
+                <span class="mosaico-titulo">Jardim exterior &amp; Pet friendly</span>
+              </div>
+            </div>
+            <!-- Imagem Detalhe Arquitetura & Plantas -->
+            <div class="mosaico-item mosaico-baixo">
+              <img class="mosaico-foto"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdSvRM-Pk1Y6JA48Nb5z4MI0MD9CUcC-UO6etqW8LQ4ze9hSgrwHynsamsyoFxmq6RKjgxUSvT24K4fbxctJ-1fN2Nwh-Nx6CO3RG8capKK6sdTX0klPd891x-3jE0gQP-PytiOe09oMW7qrUeXJOojyS_N5AV6DWjUz3cXoLN3nuxKrLGCxGX2OI3ZB7E60HYukONBebxWqoX_ffOGcYjazKbWJUYsNN8eSoKrjQ" />
+              <div class="mosaico-legenda">
+                <span class="mosaico-rotulo">Design Biofílico</span>
+                <span class="mosaico-titulo">Plantas naturais &amp; texturas orgânicas</span>
+              </div>
+            </div>
+            <!-- Imagem Mezanino Coworking -->
+            <div class="mosaico-item mosaico-baixo">
+              <img class="mosaico-foto"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRBkOsNHKDCNFUvSj6wi2zELd1WTZoUx2tK53iDJMZdluekp6c4Veo4NVLJXBMosG53_niHImggAtbD_r58A9e8IHc9LsBm5l6_vZNduto4aCkwLHYLecbqprH7B3ptzDahQReyezN3Pdz8vKslGFxV-z-nnIgSEYsblxM9mGsluRzf7xUClrRMfLAAg7hpbV_hHS5kl-bVixU6kv9-ShEKhpr9ntqndYfRnqtNvg" />
+              <div class="mosaico-legenda">
+                <span class="mosaico-rotulo">Mezanino Foco</span>
+                <span class="mosaico-titulo">Conectividade &amp; Trabalho remoto</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 10. SEÇÃO CONTATO COM MAPA E VISUAL PREMIUM -->
+      <section class="secao secao-claro" id="contato">
+        <div class="conteudo">
+          <div class="contato-grade">
+            <!-- Detalhes de Contato (5 cols) -->
+            <div class="contato-info">
+              <div>
+                <span class="sobretitulo">Esperamos Por Você</span>
+                <h2 class="titulo titulo-contato">
+                  Venha Tomar um Café Conosco
+                </h2>
+                <p class="paragrafo paragrafo-margem">
+                  Estamos no coração dos Jardins, prontos para preparar a sua
+                  xícara favorita e oferecer aquele abraço que só o café
+                  artesanal proporciona.
+                </p>
+                <div class="contato-lista">
+                  <!-- WhatsApp / Telefone -->
+                  <a class="contato-item contato-link" href="https://wa.me/5511987654321" rel="noopener noreferrer"
+                    target="_blank">
+                    <div class="contato-icone">
+                      <span class="material-symbols-outlined ico-20">chat</span>
+                    </div>
+                    <div>
+                      <span class="contato-rotulo">WhatsApp / Telefone</span>
+                      <span class="contato-destaque">(11) 98765-4321</span>
+                    </div>
+                  </a>
+                  <!-- E-mail -->
+                  <a class="contato-item contato-link" href="mailto:contato@graoeafeto.com.br">
+                    <div class="contato-icone">
+                      <span class="material-symbols-outlined ico-20">mail</span>
+                    </div>
+                    <div>
+                      <span class="contato-rotulo">E-mail de Contato</span>
+                      <span class="contato-destaque">contato@graoeafeto.com.br</span>
+                    </div>
+                  </a>
+                  <!-- Endereço -->
+                  <div class="contato-item">
+                    <div class="contato-icone">
+                      <span class="material-symbols-outlined ico-20">location_on</span>
+                    </div>
+                    <div>
+                      <span class="contato-rotulo">Localização</span>
+                      <span class="contato-endereco">Rua das Camélias, 142 - Jardins, São Paulo - SP,
+                        01410-000</span>
+                    </div>
+                  </div>
+                  <!-- Horários -->
+                  <div class="contato-item">
+                    <div class="contato-icone">
+                      <span class="material-symbols-outlined ico-20">schedule</span>
+                    </div>
+                    <div>
+                      <span class="contato-rotulo">Horário de Funcionamento</span>
+                      <span class="contato-horario">Terça a Domingo: 08h00 às 20h00</span>
+                      <span class="contato-obs">Segunda-feira: Fechado para torra e descanso da
+                        equipe</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-largo" href="https://maps.google.com/?q=Rua+das+Camelias+142+Jardins+Sao+Paulo"
+                rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined ico-20">map</span>
+                <span>Ver no Google Maps</span>
+              </a>
+            </div>
+            <!-- Mapa Estilizado & Foto Fachada (7 cols) -->
+            <div class="contato-visual">
+              <!-- Fachada Convidativa -->
+              <div class="fachada">
+                <img class="foto"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiwMmU5QZ8UF4nmYFo-sZ49-dnv2a1n5lSasVl4_1ztVtLXY_svCzpTaKIZqHzbZ_I9kxpd9xYiYkKpl1sgC5oTce3wZ2LLz5fYrz1CBXF0RQOhF0_nIdnmLJ3-_hW8m9ZdOQOIEWa43AC6JnRxvIkWaN20txm7AZWTRttRa3zpe7vnn5LaN01sY2fXFI7DF0IsmIffuJHuPvoYQ53MGPqIZfufxpY9l7pOKK0MkI" />
+                <div class="fachada-selo">
+                  <span class="material-symbols-outlined ico-16 ico-destaque">store</span>
+                  <span>Fachada Jardins</span>
+                </div>
+              </div>
+              <!-- Componente de Mapa Obrigatório via data-location -->
+              <div class="mapa" data-location="Rua das Camelias 142 Jardins Sao Paulo SP">
+                <div class="mapa-veu"></div>
+                <div class="mapa-cartao">
+                  <span class="material-symbols-outlined ico-22 ico-destaque">pin_drop</span>
+                  <div>
+                    <p class="mapa-nome">Grão &amp; Afeto Café</p>
+                    <p class="mapa-endereco">
+                      Rua das Camélias, 142 - Jardins
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

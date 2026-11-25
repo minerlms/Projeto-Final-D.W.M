@@ -1,0 +1,843 @@
+/* ==========================================================
+   style.css — Grão & Afeto Café (seções 5, 7 & 8, 9 e 10)
+   ========================================================== */
+
+/* ---------- Cores, fontes e medidas ---------- */
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background: #fff8f5;
+  color: #231a12;
+  font: 400 15px/24px "Plus Jakarta Sans", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Blocos reutilizáveis ---------- */
+.pagina {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.secao {
+  width: 100%;
+  padding: 96px 24px;
+}
+
+.secao-creme {
+  background: #fff1e7;
+}
+
+.secao-claro {
+  background: #fff8f5;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.sobretitulo {
+  display: block;
+  margin-bottom: 4px;
+  font: 700 11px/16px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #82533b;
+}
+
+.titulo {
+  margin-bottom: 4px;
+  font: 600 28px/36px "Playfair Display", serif;
+  color: #301304;
+}
+
+.titulo-redes {
+  margin-bottom: 8px;
+  line-height: 35px;
+}
+
+.titulo-contato {
+  margin-bottom: 16px;
+}
+
+.paragrafo {
+  color: #51443f;
+}
+
+.paragrafo-margem {
+  margin-bottom: 24px;
+  line-height: 26px;
+}
+
+.foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ico-15 {
+  font-size: 15px;
+}
+
+.ico-16 {
+  font-size: 16px;
+}
+
+.ico-18 {
+  font-size: 18px;
+}
+
+.ico-20 {
+  font-size: 20px;
+}
+
+.ico-22 {
+  font-size: 22px;
+}
+
+.ico-destaque {
+  color: #82533b;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 48px;
+  border-radius: 4px;
+  background: #492716;
+  color: #ffeee0;
+  font: 600 14px/20px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0px;
+  box-shadow: 0 2px 4px #cccccc;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #82533b;
+}
+
+.btn-insta {
+  padding: 0 32px;
+}
+
+.btn-insta:hover {
+  transform: translateY(-2px);
+}
+
+.btn-largo {
+  width: 100%;
+}
+
+/* ---------- SEÇÃO 5 — Redes sociais (carrossel) ---------- */
+.redes-grade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.redes-fotos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.redes-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: rgba(255, 193, 164, 0.5);
+  color: #7b4d35;
+  font: 700 11px/16px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fdebdd;
+  box-shadow: 0 2px 4px #cccccc;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s;
+}
+
+.slide.ativo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.legenda {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: rgba(48, 19, 4, 0.6);
+  color: #ffeee0;
+}
+
+.legenda-texto {
+  font: 400 13px/20px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0px;
+}
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: rgba(255, 248, 245, 0.8);
+  color: #301304;
+  box-shadow: 0 2px 4px #cccccc;
+  transition: 0.3s;
+}
+
+.seta:hover {
+  background: #fff8f5;
+}
+
+.seta-esq {
+  left: 12px;
+}
+
+.seta-dir {
+  right: 12px;
+}
+
+.pontos {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 64px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.ponto {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(255, 238, 224, 0.4);
+  transition: 0.3s;
+}
+
+.ponto.ativo {
+  width: 20px;
+  background: #ffeee0;
+}
+
+/* ---------- SEÇÕES 7 e 8 — Equipe (expansão in-place) ---------- */
+.equipe-cabecalho {
+  max-width: 672px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.equipe-grade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.membro {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fdebdd;
+  box-shadow: 0 2px 4px #cccccc;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.membro:hover {
+  z-index: 40;
+  box-shadow: 0 2px 4px #999999;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.membro-fotos {
+  position: relative;
+  width: 100%;
+  height: 288px;
+  overflow: hidden;
+  background: #f7e5d7;
+}
+
+.foto-retrato,
+.foto-acao {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.foto-acao {
+  opacity: 0;
+}
+
+.membro:hover .foto-retrato {
+  opacity: 0;
+}
+
+.membro:hover .foto-acao {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.membro-sombra {
+  position: absolute;
+  inset: 0;
+  background: rgba(48, 19, 4, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.membro:hover .membro-sombra {
+  opacity: 1;
+}
+
+.membro-acao,
+.membro-cargo {
+  position: absolute;
+  bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 2px;
+  background: #492716;
+  color: #ffeee0;
+  font: 700 11px/16px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 1px;
+}
+
+.membro-acao {
+  left: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.membro:hover .membro-acao {
+  opacity: 1;
+}
+
+.membro-cargo {
+  right: 8px;
+  box-shadow: 0 2px 4px #cccccc;
+}
+
+.tom-medio {
+  background: #82533b;
+}
+
+.membro-corpo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  background: #fdebdd;
+  transition: background-color 0.3s;
+}
+
+.membro:hover .membro-corpo {
+  background: #fff8f5;
+}
+
+.membro-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.membro-nome {
+  font: 500 22px/28px "Playfair Display", serif;
+  color: #301304;
+  transition: color 0.15s;
+}
+
+.membro:hover .membro-nome {
+  color: #82533b;
+}
+
+.membro-seta {
+  font-size: 20px;
+  color: #82533b;
+  transition: transform 0.3s;
+}
+
+.membro:hover .membro-seta {
+  transform: rotate(45deg);
+}
+
+.membro-funcao {
+  display: block;
+  margin-bottom: 4px;
+  font: 500 13px/20px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0px;
+  color: #82533b;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 0;
+  margin-top: 4px;
+  padding-top: 4px;
+  overflow: hidden;
+  border-top: 1px solid rgba(241, 223, 210, 0.2);
+  color: #51443f;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.membro:hover .bio,
+.membro.aberto .bio {
+  max-height: 384px;
+  opacity: 1;
+}
+
+.bio-linha {
+  font: 400 13px/20px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0px;
+}
+
+.rotulo {
+  font-weight: 600;
+  color: #301304;
+}
+
+.bio-frase {
+  padding-top: 4px;
+  font: italic 400 13px/20px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0px;
+  color: #301304;
+}
+
+.membro-dica {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  padding-top: 4px;
+  border-top: 1px solid rgba(241, 223, 210, 0.2);
+  color: #82533b;
+  font: 700 11px/16px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 1px;
+}
+
+.membro:hover .membro-dica {
+  display: none;
+}
+
+/* ---------- SEÇÃO 9 — Nosso ambiente (mosaico) ---------- */
+.ambiente-topo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.ambiente-texto {
+  max-width: 672px;
+}
+
+.comodidades {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.comodidade {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: #fff8f5;
+  color: #301304;
+  font: 700 11px/16px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 1px;
+}
+
+.mosaico {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.mosaico-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px #cccccc;
+}
+
+.mosaico-largo,
+.mosaico-alto {
+  height: 320px;
+}
+
+.mosaico-baixo {
+  height: 288px;
+}
+
+.mosaico-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s;
+}
+
+.mosaico-item:hover .mosaico-foto {
+  transform: scale(1.05);
+}
+
+.mosaico-legenda {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  text-align: left;
+  background: rgba(48, 19, 4, 0.7);
+}
+
+.mosaico-rotulo {
+  font: 700 11px/16px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffdbcb;
+}
+
+.mosaico-titulo {
+  font: 500 22px/28px "Playfair Display", serif;
+  color: #ffeee0;
+}
+
+/* ---------- SEÇÃO 10 — Contato e mapa ---------- */
+.contato-grade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  border-radius: 4px;
+  background: #fdebdd;
+  box-shadow: 0 2px 4px #cccccc;
+}
+
+.contato-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contato-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.contato-link {
+  transition: background-color 0.15s;
+}
+
+.contato-link:hover {
+  background: #fff8f5;
+}
+
+.contato-icone {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: #fff8f5;
+  color: #301304;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.contato-link:hover .contato-icone {
+  background: #492716;
+  color: #ffeee0;
+}
+
+.contato-rotulo {
+  display: block;
+  font: 700 11px/16px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #82533b;
+}
+
+.contato-destaque {
+  font: 600 18px/26px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0px;
+  color: #301304;
+}
+
+.contato-endereco {
+  color: #301304;
+}
+
+.contato-horario {
+  font-weight: 500;
+  color: #301304;
+}
+
+.contato-obs {
+  display: block;
+  margin-top: 2px;
+  font: 400 13px/20px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0px;
+  color: #51443f;
+}
+
+.contato-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fachada {
+  position: relative;
+  width: 100%;
+  height: 256px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fdebdd;
+  box-shadow: 0 2px 4px #cccccc;
+}
+
+.fachada-selo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: rgba(255, 248, 245, 0.9);
+  color: #301304;
+  font: 700 11px/16px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.mapa {
+  position: relative;
+  width: 100%;
+  height: 256px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6hvqKqCU6KEsDjLVMYAiJpuiKLLdDmyhS44exuiBKJyItp9s3-cfOGiiOVFQ8txpPnuxYRkDC_sjyzJplN9sI5nSXAh5lqDQAp833A69M0lrTSI9GXfmhgzrWJwJp-o23jsZAJztBlIpSnBuqKyF4d9sT2So8aoaeFgMZU5dl_uWb0qdAaJukbZN3og8n7Wa5BmB7A6Axbk5ea7hBFu7RyRUlkVvDtPqaavtVyGQ") center / cover;
+  box-shadow: 0 2px 4px #cccccc;
+}
+
+.mapa-veu {
+  position: absolute;
+  inset: 0;
+  background: rgba(48, 19, 4, 0.2);
+  pointer-events: none;
+}
+
+.mapa-cartao {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  background: rgba(255, 248, 245, 0.95);
+  box-shadow: 0 2px 4px #cccccc;
+}
+
+.mapa-nome {
+  font: 600 18px/23px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0px;
+  color: #301304;
+}
+
+.mapa-endereco {
+  font: 400 13px/20px "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0px;
+  color: #51443f;
+}
+
+/* ---------- Telas maiores ---------- */
+@media (min-width: 640px) {
+  .carrossel {
+    height: 384px;
+  }
+}
+
+@media (min-width: 768px) {
+  .secao {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .titulo {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0px;
+  }
+
+  .equipe-grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ambiente-topo {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .mosaico {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .mosaico-largo {
+    grid-column: span 8;
+    height: 384px;
+  }
+
+  .mosaico-alto {
+    grid-column: span 4;
+    height: 384px;
+  }
+
+  .mosaico-baixo {
+    grid-column: span 4;
+  }
+
+  .contato-info {
+    padding: 40px;
+  }
+
+  .fachada,
+  .mapa {
+    height: 288px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .redes-grade,
+  .contato-grade {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .redes-fotos,
+  .contato-visual {
+    grid-column: span 7;
+  }
+
+  .redes-texto,
+  .contato-info {
+    grid-column: span 5;
+  }
+
+  .equipe-grade {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
