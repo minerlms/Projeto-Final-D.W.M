@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+.container{
+    background-color: #fef8f5;
+}
+
 html{
     color: #333;
     font-family: Plus Jakarta Sans, sans-serif;
@@ -125,4 +129,12 @@ h1{
 
 .nav-header>ul>li>a:hover, .nav-header>ul>li>a:active{
     border-bottom: 2px solid #D4C5B9;
+}
+
+/***************************/
+/********** CAFÉS **********/
+/***************************/
+
+.coffee{
+    background-color: #FFEDDF;
 }
