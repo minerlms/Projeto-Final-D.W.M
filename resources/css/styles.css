@@ -1,0 +1,128 @@
+/*******************************************/
+/********** CONFIGURAÇÕES BÁSICAS **********/
+/*******************************************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    color: #333;
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/*********************************/
+/********** HERO HEADER **********/
+/*********************************/
+
+header{
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5)),
+        url('img/teste1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.slogan{
+    color: #FFEDDF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 60%;
+    width: 60%;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.slogan p, .slogan a{
+    color: #D4C5B9;
+}
+
+.slogan a:link, .slogan a:visited{
+    background-color: rgba(255,255, 255, 0.3);
+    padding: 20px 20px;
+    border-radius: 3px;
+    transition: .2s;
+}
+
+.slogan a:active, .slogan a:hover{
+     background-color: rgba(255,255, 255, 0.4);
+}
+
+.tags-top{
+    height: auto;
+    border: 4px solid #492716;
+    background-color: #492716;
+    border-radius: 7px;
+    padding-bottom: 4px;
+}
+
+.tags-top>span{
+    border: 4px solid #492716;
+    background-color: #754831;
+    border-radius: 7px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.slogan-btn{
+    display: flex;
+    height: 25%;
+    flex-direction: column;
+    justify-content: end;
+}
+
+h1{
+    font-family: Playfair Display, serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    font-size: 180%;
+}
+
+/*************************/
+/********** NAV **********/
+/*************************/
+
+.logo{
+    height: 100px;
+}
+
+.logo>img{
+    height: 100%;
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav-header>ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    width: 850px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-header>ul>li>a:link, .nav-header>ul>li>a:visited, .slogan a{
+    color: #FFEDDF;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .2s;
+}
+
+.nav-header>ul>li>a:hover, .nav-header>ul>li>a:active{
+    border-bottom: 2px solid #D4C5B9;
+}
